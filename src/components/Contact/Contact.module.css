@@ -1,0 +1,158 @@
+.overall-container {
+  display: grid;
+  position: absolute;  
+  top: 11vh;
+  height: 89vh;
+  width: 100vw;
+  grid-template-columns: 30% 65%;  
+  column-gap: 3vw;    
+  align-items: center;
+  justify-items: center;
+  background-color: teal;
+  z-index: -1; 
+}
+/*start of style for content of contact-info-container*/
+.contact-info-container {   
+  padding-left: 2vw; 
+  color: wheat;
+  border: 1px solid black
+}
+.address-data, .phone-data {
+  margin-bottom: 3vh;
+}
+.address-heading, .phone-heading, .email-heading {
+  margin-bottom: 0.7vh;
+}
+/*end of style for content of contact-info-container*/
+/*start of style for content of sending-mesage-container*/
+.sending-message-container {
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2vw;
+  grid-template-areas: 
+    'note note note'
+    'user msg msg'    
+    '. . submit'; 
+  border: 1px solid black;
+  padding: 1vw; 
+}
+.sending-message-note {  
+  grid-area: note;
+  justify-self: center;
+  margin-bottom: 2vh; 
+  color: wheat; 
+}
+.user-info-container {  
+  grid-area: user;  
+  align-content: center;  
+  color: wheat;     
+}
+.user-info-container > input {
+  height: 3vh;
+}
+.user-info-container > input#lname, input#fname {
+  margin-bottom: 1vh;
+} 
+.text-container {
+  grid-area: msg;
+  margin-bottom: 1vh;  
+}
+.submit-button {
+  grid-area: submit; 
+  padding: 0; 
+  margin: 0;
+}
+.alert-message-div {
+  color: red;
+}
+/*end of style for content of sending-mesage-container*/
+
+@media only screen and (max-width: 700px) {  
+  .sending-message-container {
+    display: grid;
+    grid-template-columns: 1fr;    
+    grid-template-areas: 
+      'title'
+      'user'
+      'msg'    
+      'submit'; 
+    border: 1px solid black;
+    padding: 1vw;
+    font-size: small; 
+  }
+  .contact-info-container {
+   font-size: small;
+  } 
+  .user-info-container > input {
+    margin-bottom: 1vh;
+  } 
+  .message-container {
+    min-height: 10vh;
+    margin-top: 1vh;  
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .overall-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+     'contact-data'
+     'message-form';   
+    place-content: start center;  
+  } 
+/*start of style for content of contact-info-container*/
+  .contact-info-container {
+    display:grid;
+    grid-area: contact-data;
+    grid-template-columns: 20% 70%;
+    grid-template-areas: 
+      'address-heading address-data'
+      'phone-heading phone-data'
+      'email-heading email-data';
+    font-size: small;
+    margin: 3vh;
+   }
+  .address-heading {
+    grid-area: address-heading;
+  }
+  .address-data {
+    grid-area: address-data;
+  }  
+  .phone-heading {
+    grid-area: phone-heading;
+  }
+  .phone-data {
+    grid-area: phone-data;
+  }
+  .email-heading {
+    grid-area: email-heading;
+  }
+  .email-data {
+    grid-area: email-data;
+  }
+/*end of style for content of contact-info-container*/
+/*start of style for content of sending-mesage-container*/
+  .sending-message-container {
+    display: grid;
+    grid-area: message-form;
+    grid-template-columns: 1fr 1fr;    
+    grid-template-areas: 
+      'title title'
+      'user user'
+      'msg msg'    
+      '. submit'; 
+    border: none;
+    padding: 1vw;
+    margin: 3vh;
+    font-size: small; 
+  }  
+  .user-info-container > input {
+    margin-bottom: 1vh;
+  } 
+  .message-container {
+    min-height: 10vh;
+    margin-top: 3vh;  
+  } 
+/*end of style for content of sending-mesage-container*/
+}

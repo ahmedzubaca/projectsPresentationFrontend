@@ -1,0 +1,18 @@
+.aboutContainer {
+  position: absolute;
+  top: 11vh;  /*relative to navStyle height in Nav.css*/ 
+  height: 89vh; /*relative to navStyle height in Nav.css*/
+  width: 100vw;      
+  background-color: green; 
+  z-index: -1;    
+}
+.imgAbout {    
+  width: 20%;
+  height: auto;
+  float: left;
+  margin: 2vw;
+}
+.text {
+  color: honeydew;
+  margin: 2vw;
+}

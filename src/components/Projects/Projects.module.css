@@ -1,0 +1,38 @@
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2vw;
+  row-gap: 2vw;
+  align-content: space-around;
+  padding: 2vw;
+}
+.img-and-title-container {
+  align-self: end;
+  cursor: pointer;
+}
+.img-style {
+  width: 100%;
+  height: auto;
+  align-self: end;
+  justify-self: center;  
+}
+.img-title {
+  text-align: center;
+  font-size: medium;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects {    
+    grid-template-columns: 1fr 1fr;    
+  }
+  .project-title {    
+    font-size: smaller;    
+  }
+}
+
+@media only screen and (max-width: 900px) {
+   .project-title {    
+    font-size: small;   
+  }
+}

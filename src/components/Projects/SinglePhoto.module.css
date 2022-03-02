@@ -1,0 +1,12 @@
+.image-container {
+  display: grid;
+  height: 89vh;
+  grid-template-columns: 1fr; 
+}
+.image-style {
+    display: grid;
+    max-width: 95vw;
+    max-height: 80vh;;
+    justify-self: center;
+    align-self: center;        
+}
